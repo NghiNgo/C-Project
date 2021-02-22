@@ -10,10 +10,12 @@ When a criminal targets a house for a burglary, typically the first thing he or 
 
 Developing a port-scanner is not so difficult as it may seem. The end result of the scanner will be as follows:
 `INPUT : IPv4 address, Port Range
+
 FUNCTION : Enter an IP address and a port range
            where the program will then attempt to
            find open ports on the given computer
            by connecting to each of them. On any
            successful connection ports, mark the
            port as open.
+           
 OUTPUT : Status of port (open/closed)`
