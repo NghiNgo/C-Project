@@ -3,8 +3,7 @@
 ## Step 1: Creating the main()
 We create a main() function that takes in the required arguments (server_ip, start_port, end_port). The server IP must be IPv4, though we can extend it to accept IPv6 as well. Try it yourself !!
 
-`
-int main(int argc, char *argv[])
+`int main(int argc, char *argv[])
 {
     if (argc < 4)
     {
@@ -24,18 +23,15 @@ int main(int argc, char *argv[])
     // Start port-scanner
     port_scanner(tIP, First_Port, Last_Port);
     return 0;
-}
-`
+}`
 
 ## Step 2: Creating the port_scanner()
 - Create a new function, port_scanner(). We traverse through all the ports in range provided and then check against each one of them.
 - Create a “struct addrinfo hints” and initialize it with proper values.
-`
-struct addrinfo hints;
+`struct addrinfo hints;
 memset(&hints, 0, sizeof(hints));
 hints.ai_family = AF_INET;
-hints.ai_socktype = SOCK_STREAM;
-`
+hints.ai_socktype = SOCK_STREAM;`
 *‘hints’ is an optional pointer to a struct addrinfo, as defined by . This structure can be used to provide hints concerning the type of socket that the caller supports or wishes to use. – from the FreeBSD man page.*
 - Initialize a pointer for the server_address that we will obtain from the server.
 Now, call “getaddrinfo(tIP, tport, &hints, &serv_addr)” with proper parameters. The getaddrinfo() function allocates and initializes a linked list of addrinfo structures, one for each network address that matches node and service, subject to any restrictions imposed by hints, and returns a pointer to the start of the list in the 4th paraments, in this case “serv_addr”. The items in the linked list are linked by the ai_next field.
