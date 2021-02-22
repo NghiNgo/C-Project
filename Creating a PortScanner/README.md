@@ -9,11 +9,13 @@ Ports are numbered for consistency and programming. The most commonly used and b
 When a criminal targets a house for a burglary, typically the first thing he or she checks is if there is an open window or door through which access to the home can be gained. Security technicians often use devices/softwares, known as port-scanners, that enable them to scan all the ports to audit computers for vulnerabilities. Any time there are open ports on one’s personal computer, there is potential for the loss of data, the occurrence of a virus, and at times, even complete system compromise.
 
 Developing a port-scanner is not so difficult as it may seem. The end result of the scanner will be as follows:
-`INPUT : IPv4 address, Port Range
+```
+INPUT : IPv4 address, Port Range
 FUNCTION : Enter an IP address and a port range
            where the program will then attempt to
            find open ports on the given computer
            by connecting to each of them. On any
            successful connection ports, mark the
            port as open.
-OUTPUT : Status of port (open/closed)`
+OUTPUT : Status of port (open/closed)
+```
